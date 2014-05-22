@@ -34,6 +34,7 @@ RubyでBMP画像(Windowsビットマップ)を扱うためのライブラリで�
 
 ```ruby
 new_image = BitMap.new(width, height, dpi)
+```
 
 ※ dpiのパラメータは省略できます(その場合、96dpiとなる)。
 
@@ -42,12 +43,14 @@ new_image = BitMap.new(width, height, dpi)
 
 ```ruby
 loaded_image = BitMap.read(filename)
+```
 
 
 # ビットマップ画像全体を一色で塗りつぶし
 
 ```ruby
 image.clear(red, green, blue)
+```
 
 ※ red, green, blue各色は 0～255 の整数
 
@@ -59,6 +62,7 @@ color = image.pget(x, y)
 red   = color[0]
 green = color[1]
 blue  = color[2]
+```
 
 ※ x, y は整数であること
 
@@ -69,6 +73,7 @@ blue  = color[2]
 
 ```ruby
 image.pset(x, y, red, green, blue)
+```
 
 ※ x, y は整数であること
 
@@ -78,6 +83,7 @@ image.pset(x, y, red, green, blue)
 
 ```ruby
 clipped_image = original_image.clip(x1, y1, x2, y2)
+```
 
 ※ x1 <= x2, y1 <= y2 にしてください
 
@@ -86,6 +92,7 @@ clipped_image = original_image.clip(x1, y1, x2, y2)
 
 ```ruby
 base_image.paste(image, x0, y0)
+```
 
 ※ x0, y0 は、image の左上を base_image のどこに置くかの指定です。
 
@@ -96,3 +103,4 @@ base_image.paste(image, x0, y0)
 
 ```ruby
 image.write(filename)
+```
